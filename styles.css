@@ -104,7 +104,7 @@ body {
 }
 
 .nav__links a:hover {
-  color: var(--white);
+  color: #e626ac;
 }
 
 .header__container img {
@@ -167,6 +167,16 @@ body {
 .header__btns a:hover {
   color: var(--primary-color-dark);
   background-color: var(--white);
+}
+
+
+.header__button {
+  display: block;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-left: 0;
 }
 
 
@@ -246,15 +256,18 @@ body {
 .project__grid {
   display: grid;
   gap: 2rem;
-}
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
 
 .project__card {
-  max-width: 450px;
+  max-width: 800px;
   margin-inline: auto;
   background-color: var(--primary-color);
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
 }
+
 
 .project__card__details {
   padding: 1rem;
@@ -274,10 +287,27 @@ body {
   color: var(--white);
 }
 
+.project__card__details h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
 .project__card__details a {
   font-size: 1.5rem;
   color: var(--white);
 }
+.project__tools i { 
+  font-size: 2rem;
+  color: #e626ac; 
+  transition: color 0.3s;
+}
+
+.project__tools i:hover {
+  color:  #f77d6b;
+}
+
+
 
 .experience__container h2 {
   margin-bottom: 4rem;
@@ -340,6 +370,58 @@ body {
   color: var(--primary-color-light);
 }
 
+
+.intro__skill {
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  color: #f77d6b;
+  
+}
+
+.intro__skill h1 {
+  margin-bottom: 20px;
+  font-size: 45px;
+  background: linear-gradient(
+    to right bottom,
+    #f77d6b 25%,
+    var(--primary-color-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.intro__skill h2{
+  font-size: 25px;
+  color: var(--primary-color-light);
+}
+
+.skill imagem {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.texto{
+  margin-bottom: 20px;
+  color: var(--primary-color-light);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.soft__skill {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: left;
+  border-radius: 2rem;
+  padding: 20px;
+  background-color: var(--primary-color);
+  max-width: 80%;
+  margin-inline: auto;
+  color:#e626ac
+}
 
 footer {
   background-color: var(--primary-color);
@@ -424,18 +506,7 @@ footer {
 
   .skill__flex {
     gap: 2rem;
-  }
-
-  .project__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }    
-  .header__button {
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start; 
-
-  }
-  
+  }   
   .github-button {
     display: inline-block;
     background-color: #333;
@@ -450,17 +521,17 @@ footer {
   }
   
   .project-link {
-    display: inline-block;
-    margin-left: 10px;
+    display: block;
     color: #000;
     text-decoration: none;
     transition: color 0.3s;
   }
   
   .project-link:hover {
-    color: #007bff;
+    color: #e626ac;
   }
   
+
 
   @media (width > 480px) {
     .banner__container {
@@ -468,7 +539,7 @@ footer {
     }
   
     .project__grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat (2,1fr);
     }
   
     .service__grid {
@@ -510,3 +581,4 @@ footer {
   }
 
 }
+ 
